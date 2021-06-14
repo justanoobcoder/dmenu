@@ -31,6 +31,8 @@
 /* enums */
 enum {
   SchemeNorm,
+  SchemeNormHighlight,
+  SchemeSelHighlight,
   SchemeFade,
   SchemeHighlight,
   SchemeHover,
@@ -148,8 +150,47 @@ cistrstr(const char *s, const char *sub)
 	return NULL;
 }
 
+static void
+drawhighlights(struct item *item, int x, int y, int maxw)
+{
+	int i, indent;
+	char *highlight;
+	char c;
+
+	if (!(strlen(item->text) && strlen(text)))
+		return;
+
+	drw_setscheme(drw, scheme[item == sel
+	                   ? SchemeSelHighlight
+	                   : SchemeNormHighlight]);
+	for (i = 0, highlight = item->text; *highlight && text[i];) {
+		if (*highlight == text[i]) {
+			/* get indentation */
+			c = *highlight;
+			*highlight = '\0';
+			indent = TEXTW(item->text);
+			*highlight = c;
+
+			/* highlight character */
+			c = highlight[1];
+			highlight[1] = '\0';
+			drw_text(
+				drw,
+				x + indent - (lrpad / 2),
+				y,
+				MIN(maxw - indent, TEXTW(highlight) - lrpad),
+				bh, 0, highlight, 0
+			);
+			highlight[1] = c;
+			i++;
+		}
+		highlight++;
+	}
+}
+
 static int
 drawitem(struct item *item, int x, int y, int w) {
+	int r;
   int iscomment = 0;
   if (item->text[0] == '>') {
     if (item->text[1] == '>') {
@@ -255,11 +296,14 @@ drawitem(struct item *item, int x, int y, int w) {
 
   if (item == sel)
     sely = y;
-  return drw_text(
+
+  r = drw_text(
       drw, x + ((iscomment == 6) ? temppadding : 0), y,
       commented ? bh : (w - ((iscomment == 6) ? temppadding : 0)), bh,
       commented ? (bh - drw_fontset_getwidth(drw, (output))) / 2 : lrpad / 2,
       output + iscomment, 0);
+	drawhighlights(item, x, y, w);
+	return r;
 }
 
 static void
@@ -846,7 +890,8 @@ usage(void)
 {
 	fputs("usage: dmenu [-bfiv] [-l lines] [-h height] [-p prompt] [-fn font] [-m monitor]\n"
 	      "             [-x xoffset] [-y yoffset] [-z width]\n"
-	      "             [-nb color] [-nf color] [-sb color] [-sf color] [-w windowid]\n", stderr);
+	      "             [-nb color] [-nf color] [-sb color] [-sf color]\n"
+	      "             [-nhb color] [-nhf color] [-shb color] [-shf color] [-w windowid]\n", stderr);
 	exit(1);
 }
 
@@ -899,6 +944,14 @@ main(int argc, char *argv[])
 			colors[SchemeSel][ColBg] = argv[++i];
 		else if (!strcmp(argv[i], "-sf"))  /* selected foreground color */
 			colors[SchemeSel][ColFg] = argv[++i];
+		else if (!strcmp(argv[i], "-nhb")) /* normal hi background color */
+			colors[SchemeNormHighlight][ColBg] = argv[++i];
+		else if (!strcmp(argv[i], "-nhf")) /* normal hi foreground color */
+			colors[SchemeNormHighlight][ColFg] = argv[++i];
+		else if (!strcmp(argv[i], "-shb")) /* selected hi background color */
+			colors[SchemeSelHighlight][ColBg] = argv[++i];
+		else if (!strcmp(argv[i], "-shf")) /* selected hi foreground color */
+			colors[SchemeSelHighlight][ColFg] = argv[++i];
 		else if (!strcmp(argv[i], "-w"))   /* embedding window id */
 			embed = argv[++i];
 		else if (!strcmp(argv[i], "-bw"))
