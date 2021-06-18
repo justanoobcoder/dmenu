@@ -33,8 +33,8 @@ static const char *colors[SchemeLast][10] = {
     /*                          fg          bg                      */
     [SchemeNorm]            = { col_nord7,  col_nord0,  col_nord0 },
     [SchemeSel]             = { col_nord5,  col_nord3,  col_nord3 },
-	[SchemeSelHighlight]    = { col_nord13, col_nord3   },
-	[SchemeNormHighlight]   = { col_nord12, col_nord0   },
+    [SchemeSelHighlight]    = { col_nord13, col_nord3   },
+    [SchemeNormHighlight]   = { col_nord12, col_nord0   },
     [SchemeOut]             = { col_nord0,  col_nord9,  col_nord9 },
     [SchemeHighlight]       = { "#f1fa8c",  "#596377",  "#3E485B"},
     [SchemeHover]           = { "#ffffff",  "#353D4B",  "#3E485B"},
