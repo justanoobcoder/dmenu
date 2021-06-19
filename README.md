@@ -3,6 +3,11 @@
 ## About
 dmenu is a dynamic menu for X, originally designed for dwm. It manages large numbers of user-defined menu items efficiently.
 
+## Screenshots
+![Pic1](./img/screenshot1.png)
+![Pic2](./img/screenshot2.png)
+![Pic3](./img/screenshot3.png)
+
 ## Patches
 This is my custom dmenu build. It contains these patches:
 + [alpha](https://tools.suckless.org/dmenu/patches/alpha/)
