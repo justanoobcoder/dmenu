@@ -11,7 +11,7 @@ static const unsigned int alpha = 0xffffff;
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
     "monospace:size=12",
-    "JetBrainsMono Nerd Font:size=12",
+    "Hack Nerd Font:size=12",
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char col_nord0[]   = "#2e3440";
