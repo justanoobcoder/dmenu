@@ -10,16 +10,16 @@ dmenu is a dynamic menu for X, originally designed for dwm. It manages large num
 
 ## Patches
 This is my custom dmenu build. It contains these patches:
-+ [alpha](https://tools.suckless.org/dmenu/patches/alpha/){:target="_blank"}
-+ [border](https://tools.suckless.org/dmenu/patches/border/){:target="_blank"}
-+ [case-insensitive](https://tools.suckless.org/dmenu/patches/case-insensitive/){:target="_blank"}
-+ [center](https://tools.suckless.org/dmenu/patches/center/){:target="_blank"}
-+ [emoji-highlight](https://tools.suckless.org/dmenu/patches/emoji-highlight/){:target="_blank"}
-+ [fuzzyhighlight](https://tools.suckless.org/dmenu/patches/fuzzyhighlight/){:target="_blank"}
-+ [fuzzymatch](https://tools.suckless.org/dmenu/patches/fuzzymatch/){:target="_blank"}
-+ [line-height](https://tools.suckless.org/dmenu/patches/line-height/){:target="_blank"}
-+ [mouse-support](https://tools.suckless.org/dmenu/patches/mouse-support/){:target="_blank"}
-+ [password](https://tools.suckless.org/dmenu/patches/password/){:target="_blank"}
++ <a href="https://tools.suckless.org/dmenu/patches/alpha/" target="_blank">alpha</a>
++ <a href="https://tools.suckless.org/dmenu/patches/border/" target="_blank">border</a>
++ <a href="https://tools.suckless.org/dmenu/patches/case-insensitive/" target="_blank">case-insensitive</a>
++ <a href="https://tools.suckless.org/dmenu/patches/center/" target="_blank">center</a>
++ <a href="https://tools.suckless.org/dmenu/patches/emoji-highlight/" target="_blank">emoji-highlight</a>
++ <a href="https://tools.suckless.org/dmenu/patches/fuzzyhighlight/" target="_blank">fuzzyhighlight</a>
++ <a href="https://tools.suckless.org/dmenu/patches/fuzzymatch/" target="_blank">fuzzymatch</a>
++ <a href="https://tools.suckless.org/dmenu/patches/line-height/" target="_blank">line-height</a>
++ <a href="https://tools.suckless.org/dmenu/patches/mouse-support/" target="_blank">mouse-support</a>
++ <a href="https://tools.suckless.org/dmenu/patches/password/" target="_blank">password</a>
 
 ## Installation
 Edit config.mk file to match your local setup (st is installed into
