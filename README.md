@@ -10,16 +10,16 @@ dmenu is a dynamic menu for X, originally designed for dwm. It manages large num
 
 ## Patches
 This is my custom dmenu build. It contains these patches:
-+ <a href="https://tools.suckless.org/dmenu/patches/alpha/" target="_blank">alpha</a>
-+ <a href="https://tools.suckless.org/dmenu/patches/border/" target="_blank">border</a>
-+ <a href="https://tools.suckless.org/dmenu/patches/case-insensitive/" target="_blank">case-insensitive</a>
-+ <a href="https://tools.suckless.org/dmenu/patches/center/" target="_blank">center</a>
-+ <a href="https://tools.suckless.org/dmenu/patches/emoji-highlight/" target="_blank">emoji-highlight</a>
-+ <a href="https://tools.suckless.org/dmenu/patches/fuzzyhighlight/" target="_blank">fuzzyhighlight</a>
-+ <a href="https://tools.suckless.org/dmenu/patches/fuzzymatch/" target="_blank">fuzzymatch</a>
-+ <a href="https://tools.suckless.org/dmenu/patches/line-height/" target="_blank">line-height</a>
-+ <a href="https://tools.suckless.org/dmenu/patches/mouse-support/" target="_blank">mouse-support</a>
-+ <a href="https://tools.suckless.org/dmenu/patches/password/" target="_blank">password</a>
++ [alpha](https://tools.suckless.org/dmenu/patches/alpha/)
++ [border](https://tools.suckless.org/dmenu/patches/border/)
++ [case-insensitive](https://tools.suckless.org/dmenu/patches/case-insensitive/)
++ [center](https://tools.suckless.org/dmenu/patches/center/)
++ [emoji-highlight](https://tools.suckless.org/dmenu/patches/emoji-highlight/)
++ [fuzzyhighlight](https://tools.suckless.org/dmenu/patches/fuzzyhighlight/)
++ [fuzzymatch](https://tools.suckless.org/dmenu/patches/fuzzymatch/)
++ [line-height](https://tools.suckless.org/dmenu/patches/line-height/)
++ [mouse-support](https://tools.suckless.org/dmenu/patches/mouse-support/)
++ [password](https://tools.suckless.org/dmenu/patches/password/)
 
 ## Installation
 Edit config.mk file to match your local setup (st is installed into
