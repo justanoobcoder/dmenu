@@ -10,16 +10,16 @@ dmenu is a dynamic menu for X, originally designed for dwm. It manages large num
 
 ## Patches
 This is my custom dmenu build. It contains these patches:
-+ [alpha](https://tools.suckless.org/dmenu/patches/alpha/)
-+ [border](https://tools.suckless.org/dmenu/patches/border/)
-+ [case-insensitive](https://tools.suckless.org/dmenu/patches/case-insensitive/)
-+ [center](https://tools.suckless.org/dmenu/patches/center/)
-+ [emoji-highlight](https://tools.suckless.org/dmenu/patches/emoji-highlight/)
-+ [fuzzyhighlight](https://tools.suckless.org/dmenu/patches/fuzzyhighlight/)
-+ [fuzzymatch](https://tools.suckless.org/dmenu/patches/fuzzymatch/)
-+ [line-height](https://tools.suckless.org/dmenu/patches/line-height/)
-+ [mouse-support](https://tools.suckless.org/dmenu/patches/mouse-support/)
-+ [password](https://tools.suckless.org/dmenu/patches/password/)
++ [alpha](https://tools.suckless.org/dmenu/patches/alpha/){:target="_blank"}
++ [border](https://tools.suckless.org/dmenu/patches/border/){:target="_blank"}
++ [case-insensitive](https://tools.suckless.org/dmenu/patches/case-insensitive/){:target="_blank"}
++ [center](https://tools.suckless.org/dmenu/patches/center/){:target="_blank"}
++ [emoji-highlight](https://tools.suckless.org/dmenu/patches/emoji-highlight/){:target="_blank"}
++ [fuzzyhighlight](https://tools.suckless.org/dmenu/patches/fuzzyhighlight/){:target="_blank"}
++ [fuzzymatch](https://tools.suckless.org/dmenu/patches/fuzzymatch/){:target="_blank"}
++ [line-height](https://tools.suckless.org/dmenu/patches/line-height/){:target="_blank"}
++ [mouse-support](https://tools.suckless.org/dmenu/patches/mouse-support/){:target="_blank"}
++ [password](https://tools.suckless.org/dmenu/patches/password/){:target="_blank"}
 
 ## Installation
 Edit config.mk file to match your local setup (st is installed into
